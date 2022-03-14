@@ -1,7 +1,6 @@
-<!--eslint-disable -->
 <template>
-  <div class="flex flex-col text-white fixed left-0 right-0 bottom-0">
-    <div class="upper-footer-section pt-16 pl-7 pr-24">
+  <div class="flex flex-col text-white">
+    <section class="upper-footer-section pt-16 pl-7 pr-24">
       <div class="flex ml-24 mr-2">
         <div class="w-full">
           <div v-for="(data, index) in footerData[0].tel" :key="index">
@@ -57,57 +56,37 @@
               href="#"
             >
               <img
-                :src="require(`~/assets/${icon.toLowerCase()}.png`)"
+                :src="
+                  require(`~/assets/footer-icons/social-media-icons/${icon.toLowerCase()}.png`)
+                "
                 :alt="icon"
                 :title="icon"
               />
             </a>
           </div>
-          <div
-            v-for="(store, index) in downloadStores"
-            :key="index"
-            class="flex justify-end mt-1.5"
-          >
-            <button class="flex items-center pl-5 pr-3 py-2 mb-4 rounded">
-              <div>
-                <img
-                  :src="require(`~/assets/${store}store.png`)"
-                  :alt="`${store}store`"
-                  class="mr-5"
-                />
-              </div>
-              <div>
-                <p class="text-xs">Download on</p>
-                <h4 class="text-lg">
-                  {{ store.replace(store[0], store[0].toUpperCase()) }} Store
-                </h4>
-              </div>
-            </button>
-          </div>
+          <app-download background="black" />
         </div>
       </div>
-    </div>
-    <div class="lower-footer-section text-center w-full">
+    </section>
+    <section class="lower-footer-section text-center w-full">
       <p class="py-5 text-white text-base font-light">
         All rights reserved. Nexbuy District LLC, {{ new Date().getFullYear() }}
       </p>
-    </div>
+    </section>
   </div>
 </template>
 
 <script>
+import AppDownload from "../DownloadButton.vue";
 import footerData from "./footer-db";
 export default {
+  components: { AppDownload },
   data() {
     return {
       footerData: [...footerData],
       iconName: footerData[4].social[0].socialMediaIcons,
       downloadStores: footerData[5].downloadStores,
     };
-  },
-
-  mounted() {
-    console.log(this.iconName);
   },
 };
 </script>
@@ -116,8 +95,7 @@ export default {
 .upper-footer-section {
   background-color: #333;
 }
-.lower-footer-section,
-button {
+.lower-footer-section {
   background-color: #202223;
 }
 </style>

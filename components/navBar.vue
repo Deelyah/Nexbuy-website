@@ -10,6 +10,9 @@
       </nuxt-link>
       <div class="pt-5 pb-2.5">
         <div class="p-2.5">
+          <nuxt-link class="text-lg mr-6 last:mr-0 font-normal" to="/"
+            >HOME</nuxt-link
+          >
           <nuxt-link
             v-for="items in navOptions"
             :key="items"
@@ -28,16 +31,20 @@
 export default {
   data() {
     return {
-      navOptions: ['Home', 'About', 'Team', 'Services', 'Blog', 'Contact'],
-    }
+      navOptions: ["About", "Team", "Services", "Blog", "Contact"],
+    };
   },
-}
+};
 </script>
 
 <style scoped>
 @media (min-width: 0px) {
   a {
     color: #202223;
+  }
+
+  .nuxt-link-exact-active {
+    color: red;
   }
 }
 
