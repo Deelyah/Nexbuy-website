@@ -4,7 +4,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'Nexbuy-websit',
+    title: 'Nexbuy-website',
     htmlAttrs: {
       lang: 'en'
     },

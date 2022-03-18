@@ -1,5 +1,5 @@
 <template>
-  <div class="pl-24 pr-20 mt-0">
+  <div class="w-full pl-3 pr-8 xl:pl-24 xl:pr-20 mt-0">
     <div class="flex justify-end">
       <nuxt-link class="mr-auto w-28 flex items-center" to="/home">
         <img
@@ -9,18 +9,21 @@
         />
       </nuxt-link>
       <div class="pt-5 pb-2.5">
-        <div class="p-2.5">
-          <nuxt-link class="text-lg mr-6 last:mr-0 font-normal" to="/"
+        <div class="hidden xl:p-2.5">
+          <nuxt-link class="xl:text-lg xl:mr-6 font-normal" to="/"
             >HOME</nuxt-link
           >
           <nuxt-link
             v-for="items in navOptions"
             :key="items"
-            class="text-lg mr-6 last:mr-0 font-normal"
+            class="xl:text-lg xl:mr-6 font-normal"
             :to="items.toLowerCase()"
           >
             {{ items.toUpperCase() }}
           </nuxt-link>
+        </div>
+        <div class="p-2.5">
+          <img src="~/assets/hamburger-menu.png" alt="" />
         </div>
       </div>
     </div>

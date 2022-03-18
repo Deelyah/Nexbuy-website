@@ -1,4 +1,4 @@
-# Nexbuy-websit
+# Nexbuy-website
 
 ## Build Setup
 

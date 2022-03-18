@@ -1,39 +1,40 @@
 <template>
   <div>
-    <div
-      v-for="(store, index) in downloadStores"
-      :key="index"
-      class="flex justify-end mt-1.5"
-    >
-      <button
-        class="flex items-center pl-5 pr-3 py-2 mb-4 rounded"
-        :class="setBackgroundColor"
+    <div :class="display">
+      <div
+        v-for="(store, index) in downloadStores"
+        :key="index"
+        :class="`flex justify-end mt-1.5 ${setFontColor}`"
       >
-        <div>
-          <img
-            :src="
-              require(`~/assets/footer-icons/${store}store${setIconColor}.png`)
-            "
-            :alt="`${store}store`"
-            class="mr-5"
-          />
-        </div>
-        <div>
-          <p class="text-xs">Download on</p>
-          <h4 class="text-lg">
-            {{ store.replace(store[0], store[0].toUpperCase()) }} Store
-          </h4>
-        </div>
-      </button>
+        <button
+          :class="`flex items-center pl-5 pr-3 py-2 mb-4 rounded ${setBackgroundColor} ${extraStyling}`"
+        >
+          <div>
+            <img
+              :src="
+                require(`~/assets/footer-icons/${store}store${setIconColor}.png`)
+              "
+              :alt="`${store}store`"
+              class="mr-5"
+            />
+          </div>
+          <div>
+            <p class="text-xs">Download on</p>
+            <h4 class="text-lg">
+              {{ store.replace(store[0], store[0].toUpperCase()) }} Store
+            </h4>
+          </div>
+        </button>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
-import footerData from "./footer-details/footer-db";
+import footerData from "./databases/footer-db";
 
 export default {
-  props: ["background", "extraStyling"],
+  props: ["background", "extraStyling", "display"],
   data() {
     return {
       downloadStores: footerData[5].downloadStores,
@@ -48,8 +49,12 @@ export default {
       }
     },
 
-    setDisplay() {
-      return `${this.extraStyling}`;
+    setFontColor() {
+      if (this.background == "black") {
+        return "text-white";
+      } else {
+        return "text-white";
+      }
     },
 
     setIconColor() {

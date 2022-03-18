@@ -1,3 +1,5 @@
+//  This is a mock database containing all items in the footer.
+//  This database helps to reduce the amount of html in the .vue file.
 export default [
   { tel: ["+234 814 015 0211", "+234 810 282 99601"] },
   { mails: ["info@nexbuydistrict.com", "thenexbuydistrict@gmail.com"] },
