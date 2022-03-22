@@ -7,7 +7,7 @@
         :class="`flex justify-end mt-1.5 ${setFontColor}`"
       >
         <button
-          :class="`flex items-center pl-5 pr-3 py-2 mb-4 rounded ${setBackgroundColor} ${extraStyling}`"
+          :class="`flex items-center pl-2 lg:pl-5 pr-3 py-2 mb-4 rounded-lg ${setBackgroundColor} ${extraStyling}`"
         >
           <div>
             <img
@@ -15,12 +15,12 @@
                 require(`~/assets/footer-icons/${store}store${setIconColor}.png`)
               "
               :alt="`${store}store`"
-              class="mr-5"
+              class="mr-4 lg:mr-5"
             />
           </div>
           <div>
             <p class="text-xs">Download on</p>
-            <h4 class="text-lg">
+            <h4 class="text-base lg:text-lg">
               {{ store.replace(store[0], store[0].toUpperCase()) }} Store
             </h4>
           </div>

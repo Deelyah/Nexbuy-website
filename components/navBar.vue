@@ -15,15 +15,13 @@
         <div class="pt-5 pb-2.5">
           <!--#3 All links are stored in an aray in the scripts to reduce HTML contents -->
           <div class="hidden lg:block p-2.5">
-            <!--#4 The link to the homePage is not included in the array as its route path != its name -->
-            <nuxt-link class="text-sm mr-6" to="/">HOME</nuxt-link>
             <nuxt-link
               v-for="items in navOptions"
               :key="items"
               class="text-sm mr-6"
-              :to="items.toLowerCase()"
+              :to="items == 'Home' ? '/' : items.toLowerCase()"
             >
-              <!--#5 :to="items.toLowerCase() means that the route paths to each page are same as the name of the link in lower case" -->
+              <!--#4 :to="items.toLowerCase() means that the route paths to each page are same as the name of the link in lower case" -->
               {{ items.toUpperCase() }}
             </nuxt-link>
           </div>
@@ -42,16 +40,10 @@
         <img src="~/assets/close.png" alt="" />
       </button>
       <ul>
-        <!-- same as #3 -->
-        <li @click="closeDropdown">
-          <nuxt-link class="block pl-6 py-4 font-semibold" to="/"
-            >HOME</nuxt-link
-          >
-        </li>
         <li @click="closeDropdown" v-for="items in navOptions" :key="items">
           <nuxt-link
             class="block pl-6 py-4 font-semibold"
-            :to="items.toLowerCase()"
+            :to="items == 'Home' ? '/' : items.toLowerCase()"
             >{{ items.toUpperCase() }}</nuxt-link
           >
         </li>
@@ -65,7 +57,7 @@
 export default {
   data() {
     return {
-      navOptions: ["About", "Team", "Services", "Blog", "Contact"],
+      navOptions: ["Home", "About", "Team", "Services", "Blog", "Contact"],
       sideMenu: "hidden",
     };
   },
@@ -116,8 +108,7 @@ export default {
   .dropdown {
     top: -384px;
     right: -296px;
-    animation: cl;
-    animation: open-menu 0.2s 1;
+    animation: open-menu 0.4s 1;
     animation-timing-function: ease-in-out;
     animation-fill-mode: forwards;
   }
