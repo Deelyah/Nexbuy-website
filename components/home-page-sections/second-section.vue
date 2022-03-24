@@ -16,8 +16,6 @@
       >
         {{ data }}
       </p>
-      <!-- lg:ml-10 mobile-mockup flex justify-center bg-no-repeat mt-9 -->
-      <!-- section_two_data_container flex flex-col justify-center items-center w-full lg:w-2/4 lg:mt-9 -->
       <div class="lg:flex pb-10">
         <div>
           <custom-button styling="lg:mr-20 mb-12">Download Now</custom-button>

@@ -3,7 +3,7 @@
     <div class="w-full pl-3 pr-8 xl:pl-24 xl:pr-20 mt-0">
       <!--#1 The div above contains all nav-elements including the hamburger menu which is displayed on tablets and phones -->
       <div class="flex justify-end">
-        <nuxt-link class="mr-auto w-28 flex items-center" to="/home">
+        <nuxt-link class="mr-auto w-28 flex items-center" to="/">
           <!--#2 This is nexbuy logo. It is also a link to the homePage -->
           <img
             class="object-cover h-20 w-16 sm:w-full"
@@ -123,17 +123,5 @@ export default {
       right: 0;
     }
   }
-}
-
-@media (min-width: 460px) {
-}
-
-@media (min-width: 640px) {
-}
-
-@media (min-width: 1024px) {
-}
-
-@media (min-width: 1280px) {
 }
 </style>

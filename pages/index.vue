@@ -24,7 +24,7 @@
       </div>
     </div>
 
-    <section class="section_one pt-16 md:pt-72 pb-64">
+    <section class="section_one pt-16 md:pt-72 pb-2 lg:pb-64">
       <div>
         <div
           v-for="(items, index) in homeDatabase"
@@ -61,8 +61,8 @@
     <third-section />
 
     <fourth-section />
-    <!--
-    <fifth-section />-->
+
+    <!-- <fifth-section />-->
     <sixth-section />
   </div>
 </template>
@@ -78,11 +78,11 @@ import SixthSection from "../components/home-page-sections/sixth-section.vue";
 
 export default {
   components: {
-    //     CustomButton,
+    //CustomButton,
     SecondSection,
     ThirdSection,
     FourthSection,
-    //     FifthSection,
+    // FifthSection,
     SixthSection,
   },
   name: "IndexPage",
