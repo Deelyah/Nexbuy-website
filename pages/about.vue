@@ -1,11 +1,17 @@
 <template>
   <div>
-    <h2>About Page</h2>
+    <section class="section_one pb-11">
+      <h2>About Our Application</h2>
+    </section>
   </div>
 </template>
 
 <script>
-export default {}
+export default {};
 </script>
 
-<style></style>
+<style scoped>
+.section_one {
+  background-color: #e5e5e5;
+}
+</style>

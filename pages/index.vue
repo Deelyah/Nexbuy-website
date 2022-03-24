@@ -59,8 +59,9 @@
 
     <second-section />
     <third-section />
-    <!--
+
     <fourth-section />
+    <!--
     <fifth-section />
     <sixth-section /> -->
   </div>
@@ -71,7 +72,7 @@
 import dataForSectionOne from "../components/databases/homePage-db";
 import SecondSection from "../components/home-page-sections/second-section.vue";
 import ThirdSection from "../components/home-page-sections/third-section.vue";
-// import FourthSection from "../components/home-page-sections/fourth-section.vue";
+import FourthSection from "../components/home-page-sections/fourth-section.vue";
 // import FifthSection from "../components/home-page-sections/fifth-section.vue";
 // import SixthSection from "../components/home-page-sections/sixth-section.vue";
 
@@ -80,7 +81,7 @@ export default {
     //     CustomButton,
     SecondSection,
     ThirdSection,
-    //     FourthSection,
+    FourthSection,
     //     FifthSection,
     //     SixthSection,
   },
