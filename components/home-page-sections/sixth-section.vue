@@ -1,15 +1,21 @@
 <template>
   <div class="mt-10">
-    <div class="flex flex-col justify-center pt-9 items-center">
-      <h2 class="mb-5">Subscribe to our newsletter</h2>
-      <p class="mb-16">
+    <div class="flex flex-col justify-center pt-9 px-8 items-center">
+      <h2 class="mb-5 text-xl sm:text-2xl lg:text-4xl font-semibold">
+        Subscribe to our newsletter
+      </h2>
+      <p class="mb-16 text-xs sm:text-base md:text-lg lg:text-xl">
         Exciting deals are always available! Be the first to know
       </p>
-      <form class="flex pt-11 mb-44 pb-3">
-        <div class="input_div w-full pl-6 pt-4 pb-3 pr-72">
+      <form class="w-full flex lg:pt-11 mb-44 pb-3 sm:px-11 md:px-20">
+        <div class="input_div w-full pl-6 lg:pt-4 lg:pb-3">
           <input class="py-2" type="email" placeholder="Enter email address" />
         </div>
-        <button class="text-white font-medium px-6 pt-6 pb-5">Subscribe</button>
+        <button
+          class="text-white lg:text-2xl font-medium px-6 py-3 lg:pt-6 lg:pb-5"
+        >
+          Subscribe
+        </button>
       </form>
     </div>
   </div>
@@ -21,19 +27,16 @@ export default {};
 
 <style scoped>
 h2 {
-  font-size: 34px;
-  font-weight: 600;
   color: #fb3a3a;
 }
 
 button {
   background-color: #fb3a3a;
-  font-size: 26px;
 }
 
 input {
   outline: none;
-  width: 269px;
+  /* width: 269px; */
 }
 
 .input_div {
