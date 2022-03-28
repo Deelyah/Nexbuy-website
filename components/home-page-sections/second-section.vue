@@ -1,12 +1,15 @@
 <template>
   <section class="section_two w-full pt-10 lg:flex lg:justify-center">
-    <div class="flex justify-center items-center">
-      <img src="~/assets/mobile-mockup.png" alt="" />
-    </div>
+    <lazy-image-loader
+      paths="mobile-mockup.png"
+      alt="mobile-mockup"
+      imageStyles=""
+      containerStyles="flex justify-center items-center"
+    ></lazy-image-loader>
     <div
       class="flex flex-col lg:w-2/4 items-center justify-center px-10 lg:px-0"
     >
-      <h2 class="text-lg font-semibold mb-2.5">
+      <h2 class="text-lg md:text-2xl font-semibold mb-2.5">
         Download now and shop with ease
       </h2>
       <p

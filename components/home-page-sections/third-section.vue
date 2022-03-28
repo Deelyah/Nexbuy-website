@@ -3,16 +3,19 @@
     <div class="px-4 flex justify-end md:pl-0 items-center">
       <div class="testimonials flex flex-col md:w-2/4">
         <div class="flex justify-center mb-5">
-          <img
-            src="~/assets/opening-quote.png"
-            class="opening_quote mr-auto"
+          <lazy-image-loader
+            paths="opening-quote.png"
+            imageStyles="opening_quote"
+            containerStyles="mr-auto"
             alt="opening-quote"
-          />
-          <img
-            class="closing_quote ml-auto"
-            src="~/assets/closing-quote.png"
+          ></lazy-image-loader>
+
+          <lazy-image-loader
+            paths="closing-quote.png"
+            imageStyles="closing_quote"
+            containerStyles="ml-auto"
             alt="closing-quote"
-          />
+          ></lazy-image-loader>
         </div>
         <div class="flex justify-center items-center">
           <p class="px-5 lg:px-0 text-center sm:text-lg md:flex md:flex-col">
@@ -25,15 +28,21 @@
         </div>
       </div>
       <div class="w-1/4">
-        <div class="flex justify-center lg:justify-end">
-          <img src="~/assets/arrow-right.png" alt="arrow" />
-        </div>
+        <lazy-image-loader
+          paths="arrow-right.png"
+          imageStyles=""
+          containerStyles="flex justify-center sm:justify-end"
+          alt="arrow"
+        ></lazy-image-loader>
       </div>
     </div>
     <div class="flex justify-center items-center mt-7">
-      <div class="mr-5">
-        <img src="~/assets/passport.png" alt="passport" />
-      </div>
+      <lazy-image-loader
+        paths="passport.png"
+        imageStyles=""
+        containerStyles="mr-5"
+        alt="passport"
+      ></lazy-image-loader>
       <div>
         <p class="text-sm font-normal">Amaka Chisom</p>
         <p class="text-sm font-light">Fashion Entrepreneur</p>

@@ -2,9 +2,12 @@
   <section class="section_four pt-52 pb-32">
     <div class="flex flex-col justify-center items-center lg:mb-14">
       <div class="circle one flex flex-col items-center lg:py-14">
-        <div class="w-12 h-12 lg:mb-6 my-4 lg:my-0">
-          <img src="~/assets/mission.png" alt="Our mission" />
-        </div>
+        <lazy-image-loader
+          paths="mission.png"
+          imageStyles=""
+          containerStyles="w-12 h-12 lg:mb-6 my-4 lg:my-0"
+          alt="Our mission"
+        ></lazy-image-loader>
         <div>
           <h2 class="mb-3 lg:mb-6 font-semibold text-3xl">Our Mission</h2>
         </div>
@@ -21,9 +24,12 @@
       <div
         class="circle two flex flex-col justify-center items-center lg:py-14"
       >
-        <div class="h-12 w-12 lg:mb-6">
-          <img src="~/assets/vision.png" alt="" />
-        </div>
+        <lazy-image-loader
+          paths="vision.png"
+          imageStyles=""
+          containerStyles="h-12 w-12 lg:mb-6"
+          alt="our Vision"
+        ></lazy-image-loader>
         <div>
           <h2 class="mb-3 lg:mb-6 font-semibold text-3xl">Our Vision</h2>
         </div>

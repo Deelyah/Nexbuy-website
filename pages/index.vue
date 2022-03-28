@@ -31,12 +31,11 @@
           :key="index"
           class="lg:flex lg:justify-center mb-36"
         >
-          <div class="flex justify-center lg:justify-end items-center">
-            <img
-              class="lg:mr-32 mb-6 lg:mb-0"
-              :src="require(`~/assets/${items.image}.png`)"
-            />
-          </div>
+          <lazy-image-loader
+            :paths="`${items.image}.png`"
+            imageStyles="lg:mr-32 mb-6 lg:mb-0"
+            containerStyles="flex justify-center lg:justify-end items-center"
+          ></lazy-image-loader>
           <div
             class="lg:w-2/4 lg:flex lg:flex-col lg:items-center justify-center"
           >
@@ -68,7 +67,7 @@
 </template>
 
 <script>
-import CustomButton from "../components/CustomButton.vue";
+// import CustomButton from "../components/CustomButton.vue";
 import dataForSectionOne from "../components/databases/homePage-db";
 import SecondSection from "../components/home-page-sections/second-section.vue";
 import ThirdSection from "../components/home-page-sections/third-section.vue";

@@ -7,12 +7,14 @@
       <p class="mb-16 text-xs sm:text-base md:text-lg lg:text-xl">
         Exciting deals are always available! Be the first to know
       </p>
-      <form class="w-full flex lg:pt-11 mb-44 pb-3 sm:px-11 md:px-20">
-        <div class="input_div w-full pl-6 lg:pt-4 lg:pb-3">
+      <form
+        class="w-full flex justify-center lg:pt-11 mb-44 pb-3 sm:px-11 md:px-20"
+      >
+        <div class="input_div w-2/4 pl-6 lg:pt-2 lg:pb-2">
           <input class="py-2" type="email" placeholder="Enter email address" />
         </div>
         <button
-          class="text-white lg:text-2xl font-medium px-6 py-3 lg:pt-6 lg:pb-5"
+          class="text-white lg:text-2xl font-medium px-6 py-3 lg:pt-0 lg:pb-0"
         >
           Subscribe
         </button>

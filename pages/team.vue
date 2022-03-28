@@ -1,11 +1,22 @@
 <template>
   <div>
-    <h2>Teams</h2>
+    <lazy-image-loader
+      paths="about-page-images/section-two.png"
+    ></lazy-image-loader>
+    <lazy-image-loader
+      paths=""
+      imageStyles=""
+      containerStyles=""
+      alt=""
+    ></lazy-image-loader>
   </div>
 </template>
 
 <script>
-export default {}
+// import ImageLoader from "../components/ImageLoader.vue";
+export default {
+  // components: { ImageLoader },
+};
 </script>
 
 <style></style>

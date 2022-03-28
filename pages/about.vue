@@ -25,7 +25,9 @@
           alt=""
         />
 
-        <div class="flex flex-col justify-center items-center md:pl-8 lg:w-3/4">
+        <div
+          class="flex flex-col w-full justify-center items-center md:pl-8 lg:w-3/4"
+        >
           <h2 class="text-lg sm:text-2xl lg:text-3xl font-semibold mb-3">
             Our Story
           </h2>

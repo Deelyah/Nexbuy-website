@@ -5,11 +5,12 @@
       <div class="flex justify-end">
         <nuxt-link class="mr-auto w-28 flex items-center" to="/">
           <!--#2 This is nexbuy logo. It is also a link to the homePage -->
-          <img
-            class="object-cover h-20 w-16 sm:w-full"
-            src="../assets/logo.png"
+          <lazy-image-loader
+            paths="logo.png"
+            imageStyles="object-cover h-20 w-16 sm:w-full"
+            containerStyles=""
             alt="logo"
-          />
+          ></lazy-image-loader>
         </nuxt-link>
 
         <div class="pt-5 pb-2.5">
@@ -26,7 +27,12 @@
             </nuxt-link>
           </div>
           <button @click="openDropdown" class="lg:hidden p-2.5">
-            <img src="~/assets/hamburger-menu.png" alt="" />
+            <lazy-image-loader
+              paths="hamburger-menu.png"
+              imageStyles=""
+              containerStyles=""
+              alt="hamburger-menu"
+            ></lazy-image-loader>
           </button>
         </div>
       </div>
@@ -35,9 +41,15 @@
     <div :class="`${sideMenu} fixed bg-white`">
       <button
         @click="closeDropdown"
+        title="close"
         class="close_btn flex p-2 rounded-full ml-60 mr-4 mt-5"
       >
-        <img src="~/assets/close.png" alt="" />
+        <lazy-image-loader
+          paths="close.png"
+          imageStyles=""
+          containerStyles=""
+          alt="close"
+        ></lazy-image-loader>
       </button>
       <ul>
         <li @click="closeDropdown" v-for="items in navOptions" :key="items">

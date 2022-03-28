@@ -14,13 +14,13 @@
               class="ml-3.5"
               href="#"
             >
-              <img
-                :src="
-                  require(`~/assets/footer-icons/social-media-icons/${icon.toLowerCase()}.png`)
-                "
+              <lazy-image-loader
+                :paths="`footer-icons/social-media-icons/${icon.toLowerCase()}.png`"
+                imageStyles=""
+                containerStyles=""
                 :alt="icon"
                 :title="icon"
-              />
+              ></lazy-image-loader>
             </a>
           </div>
           <download-button

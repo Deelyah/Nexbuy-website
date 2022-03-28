@@ -9,15 +9,12 @@
         <button
           :class="`flex items-center pl-2 lg:pl-5 pr-3 py-2 mb-4 rounded-lg ${setBackgroundColor} ${extraStyling}`"
         >
-          <div>
-            <img
-              :src="
-                require(`~/assets/footer-icons/${store}store${setIconColor}.png`)
-              "
-              :alt="`${store}store`"
-              class="mr-4 lg:mr-5"
-            />
-          </div>
+          <lazy-image-loader
+            :paths="`footer-icons/${store}store${setIconColor}.png`"
+            imageStyles="mr-4 lg:mr-5"
+            containerStyles=""
+            :alt="`${store}store`"
+          ></lazy-image-loader>
           <div>
             <p class="text-xs">Download on</p>
             <h4 class="text-base lg:text-lg">
