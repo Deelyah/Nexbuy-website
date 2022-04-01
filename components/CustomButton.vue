@@ -1,6 +1,6 @@
 <template>
   <div>
-    <button class="px-10 py-4 rounded-lg" :class="styling">
+    <button class="px-8 py-3 lg:px-10 lg:py-4 rounded-lg" :class="styling">
       <slot></slot>
     </button>
   </div>
@@ -8,13 +8,13 @@
 
 <script>
 export default {
-  props: ['styling'],
+  props: ["styling"],
 };
 </script>
 
 <style scoped>
-button{
-  background-color: #FB3A3A;
+button {
+  background-color: #fb3a3a;
   color: #fff;
 }
-</style>></style>
+</style>
