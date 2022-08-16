@@ -20,7 +20,7 @@
         :key="index"
       >
         <lazy-image-loader
-          :paths="`teams-page-images/lead4.png`"
+          :paths="`teams-page-images/lead2.png`"
           imageStyles="w-20 h-20 sm:h-28 sm:w-28"
           containerStyles=" "
           alt=""
@@ -30,13 +30,19 @@
           {{ data.position }}
         </p>
         <div v-for="(socials, index) in data.socialMedia" :key="index">
+          <img
+            src="~/assets/footer-icons/social-media-icons/Behance/behance.png"
+            alt=""
+          />
           <p>{{ socials }}</p>
           <!-- <lazy-image-loader
-        :paths="`footer-icons/social-media-icons/${socials}.png`"
-        imageStyles=""
-        containerStyles=""
-        alt=""
-      ></lazy-image-loader> -->
+            :paths="`footer-icons/social-media-icons/${
+              socials == 'behance' ? 'Behance/behance' : socials
+            }.png`"
+            imageStyles=""
+            containerStyles=""
+            alt=""
+          ></lazy-image-loader> -->
         </div>
       </div>
     </div>
@@ -51,12 +57,18 @@
           containerStyles="mb-5"
           alt="partners"
         ></lazy-image-loader>
-        <p class="px-9 text-xs leading-7 pb-4">{{ secondParagraph }}</p>
+        <p
+          class="px-10 md:px-20 lg:px-30 text-xs sm:text-base lg:text-xl leading-7 pb-4"
+        >
+          {{ secondParagraph }}
+        </p>
       </div>
 
-      <nuxt-link class="flex justify-center mb-6 sm:mb-12" to="/">
-        <custom-button>Partner With Us</custom-button>
-      </nuxt-link>
+      <div>
+        <nuxt-link class="flex justify-center mb-6 sm:mb-12" to="/">
+          <custom-button>Partner With Us</custom-button>
+        </nuxt-link>
+      </div>
     </div>
   </div>
 </template>
@@ -95,7 +107,7 @@ export default {
   }
 }
 
-@media (min-width: 640px) {
+@media (min-width: 786px) {
   .team_leads_data {
     flex: 1 1 25%;
   }
